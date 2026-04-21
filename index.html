@@ -61,7 +61,7 @@ function convertTemp(t, u) {
         return { t1, u1 };
     }
 
-	
+
 
 	    $(document).ready(function(){
 			$("button").click(function(){
@@ -93,7 +93,11 @@ function convertTemp(t, u) {
                     u1 = "Réaumur";
 			   }
 			   
-			   alert("Temperature is "+t1+" in "+u1);
+
+			   var result = convertTemp(t, u);
+				$('#result').html("Temperature is <b>" + result.t1 + "</b> in " + result.u1);
+
+				
 			});
 		});
 
