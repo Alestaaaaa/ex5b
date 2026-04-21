@@ -33,6 +33,19 @@
 	</div>
 	
 	<script>
+		function validateTemp(t) {
+    if (isNaN(t)) {
+        alert("Please verify whether the temperature value is correct!!!");
+        return false;
+    }
+    if (!(t >= -100 && t <= 100)) {
+        alert("Tempurature entered (in Celsius) must be between 0 and 100 C'");
+        return false;
+    }
+    return true;
+}
+
+
 	    $(document).ready(function(){
 			$("button").click(function(){
 			   var t = Number($('#temp').val());//celsius
@@ -66,6 +79,8 @@
 			   alert("Temperature is "+t1+" in "+u1);
 			});
 		});
+
+		
 	</script>
 </body>
 </html>
